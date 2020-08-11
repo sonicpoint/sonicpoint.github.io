@@ -8,7 +8,7 @@ import { DirectionalLight } from "./lighting/directionalLight.js";
 import { SceneItem } from "./sceneItem.js";
 import { Scene } from "./scene.js";
 import { CancelToken } from "./cancelToken.js";
-import { TransformationPath } from "./transformationPaths/TransformationPath.js";
+import { TransformationPath } from "./transformationPaths/transformationPath.js";
 import { TransformationSet } from "./transformationPaths/transformationSet.js";
 import { OrbiterAnimator } from "./animators/orbiterAnimator.js";
 import { WalkerAnimator } from "./animators/walkerAnimator.js";

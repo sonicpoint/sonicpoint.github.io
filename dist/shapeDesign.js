@@ -7,7 +7,7 @@ import { CancelToken } from "./cancelToken.js";
 import { OrbiterAnimator } from "./animators/orbiterAnimator.js";
 import { HtmlHelper } from "./htmlHelper.js";
 import { DirectionalLight } from "./lighting/directionalLight.js";
-import { TransformationPath } from "./transformationPaths/TransformationPath.js";
+import { TransformationPath } from "./transformationPaths/transformationPath.js";
 import { RoundedCuboid } from "./geometries/roundedCuboid.js";
 import { PositionalLight } from "./lighting/positionalLight.js";
 const fpsSpan = document.querySelector("#fps");

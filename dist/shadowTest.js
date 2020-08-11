@@ -2,7 +2,7 @@ import { Camera } from "./camera.js";
 import { SceneItem } from "./sceneItem.js";
 import { CancelToken } from "./cancelToken.js";
 import { HtmlHelper } from "./htmlHelper.js";
-import { TransformationPath } from "./transformationPaths/TransformationPath.js";
+import { TransformationPath } from "./transformationPaths/transformationPath.js";
 import { Transformation } from "./transformation.js";
 import { Lighting } from "./lighting/lighting.js";
 import { DirectionalLight } from "./lighting/directionalLight.js";

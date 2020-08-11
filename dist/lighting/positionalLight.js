@@ -1,5 +1,5 @@
 import * as vec3 from "../utils/gl-matrix/vec3.js";
-import { TransformationPath } from "../transformationPaths/TransformationPath.js";
+import { TransformationPath } from "../transformationPaths/transformationPath.js";
 import { Light } from "./light.js";
 export class PositionalLight extends Light {
     constructor(lightPosition, diffuse, ambient, specular, transformationPath) {
