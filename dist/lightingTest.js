@@ -25,7 +25,7 @@ import { PomProgram } from "./programs/complete/pomProgram.js";
 import { TransformationSet } from "./transformationPaths/transformationSet.js";
 import { OrbiterAnimator } from "./animators/orbiterAnimator.js";
 import { BumpedTorus } from "./geometries/bumpedTorus.js";
-import { SimplePbrProgram } from "./programs/experimental/simplePbrProgram2.js";
+import { SimplePbrProgram } from "./programs/experimental/simplePbrProgram.js/index.js";
 import { PbrMaterial } from "./pbrMaterial.js";
 import { NormalMapProgram } from "./programs/complete/normalMapProgram.js";
 import { AngularTransformationSet } from "./transformationPaths/angularTransformationSet.js";

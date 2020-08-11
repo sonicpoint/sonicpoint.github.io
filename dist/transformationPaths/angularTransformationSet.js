@@ -1,5 +1,5 @@
 import { Transformation } from "../transformation.js";
-import { TransformationSet } from "./TransformationSet.js";
+import { TransformationSet } from "./transformationSet.js";
 //
 // Transformation Set that uses an incrementing circular angle
 //

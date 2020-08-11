@@ -13,7 +13,7 @@ import { Surface } from "./geometries/surface.js";
 import { SimpleProgram } from "./programs/complete/simpleProgram.js";
 import { MixedAnimator } from "./animators/mixedAnimator.js";
 import { PositionalLight } from "./lighting/positionalLight.js";
-import { SimplePbrProgram } from "./programs/experimental/simplePbrProgram2.js";
+import { SimplePbrProgram } from "./programs/experimental/simplePbrProgram.js/index.js";
 import { BumpedTorus } from "./geometries/bumpedTorus.js";
 import { PbrMaterial } from "./pbrMaterial.js";
 const fpsSpan = document.querySelector("#fps");
