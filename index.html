@@ -2,12 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>WebGL2 Basic Template</title>
+    <title>Lighting - WebGL2</title>
+    <link rel="stylesheet" href="/css/navbar.css">
     <style type="text/css">
+      html {
+        /* Prevent scroll-bar from appearing when controls' values change */
+        overflow-y: hidden;
+      }
       body {
-        background-color: white;
+        background-color: darkgray;
         color: black;
         font-family: Arial;
+      }
+      #fpsDiv {
+        top: 0;
+        left: 85%;
+        width: 40px;
+        height: 20px;
+        background-color: beige;
+        color: black;
+        font-weight: bold;
+        position: absolute;
+        text-align: center;
+      }
+      .controls
+      {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: beige;
+        padding: 20px;
+        border: 2px solid #404040;
       }
       canvas {
         width: 100%;
@@ -17,10 +42,64 @@
   </head>
 
   <body>
+    <div id="fpsDiv">
+      <span id="fps" />
+    </div>
+
+    <div class="controls">
+      <fieldset style="margin-bottom: 10px;">
+        <legend>Positional Light 1</legend>
+        <input type="range" min="-20" max="20" step="0.1" value="-10" class="slider" id="pos1X">
+        <label for="pos1X" style="vertical-align: super;"> X</label><br />
+        <input type="range" min="-20" max="20" step="0.1" value="12" class="slider" id="pos1Y">
+        <label for="pos1Y" style="vertical-align: super;"> Y</label><br />
+        <input type="range" min="-20" max="20" step="0.1" value="10" class="slider" id="pos1Z">
+        <label for="pos1Z" style="vertical-align: super;"> Z</label><br />
+        <input type="range" min="0" max="1" value="1" step="0.1" class="slider" id="pos1Red">
+        <label for="pos1Red" style="vertical-align: super;"> Red</label><br />
+        <input type="range" min="0" max="1" value="1" step="0.1" class="slider" id="pos1Green">
+        <label for="pos1Green" style="vertical-align: super;"> Green</label><br />
+        <input type="range" min="0" max="1" value="0.8" step="0.1" class="slider" id="pos1Blue">
+        <label for="pos1Blue" style="vertical-align: super;"> Blue</label><br />
+      </fieldset>
+      <fieldset style="margin-bottom: 10px;">
+        <legend>Positional Light 2</legend>
+        <input type="range" min="-20" max="20" step="0.1" value="10" class="slider" id="pos2X">
+        <label for="pos2X" style="vertical-align: super;"> X</label><br />
+        <input type="range" min="-20" max="20" step="0.1" value="0" class="slider" id="pos2Y">
+        <label for="pos2Y" style="vertical-align: super;"> Y</label><br />
+        <input type="range" min="-20" max="20" step="0.1" value="-10" class="slider" id="pos2Z">
+        <label for="pos2Z" style="vertical-align: super;"> Z</label><br />
+        <input type="range" min="0" max="1" value="0.8" step="0.1" class="slider" id="pos2Red">
+        <label for="pos2Red" style="vertical-align: super;"> Red</label><br />
+        <input type="range" min="0" max="1" value="0.8" step="0.1" class="slider" id="pos2Green">
+        <label for="pos2Green" style="vertical-align: super;"> Green</label><br />
+        <input type="range" min="0" max="1" value="1" step="0.1" class="slider" id="pos2Blue">
+        <label for="pos2Blue" style="vertical-align: super;"> Blue</label><br />
+      </fieldset>
+      <div>
+        <input type="checkbox" id="animate" />
+        <label for="animate"> Animate</label><br>
+        <input type="checkbox" id="blobIsMetal" checked />
+        <label for="blobIsMetal"> Blob is metal</label><br>
+        <input type="range" min="0" max="0.1" value="0" step="0.01" class="slider" id="parallaxDepth">
+        <label for="parallaxDepth" style="vertical-align: super;"> Wood Parallax</label><br />
+        <input type="range" min="0" max="1" value="0.1" step="0.1" class="slider" id="shininess">
+        <label for="shininess" style="vertical-align: super;"> Wood Shininess</label><br />
+      </div>
+      <div>
+        <input type="checkbox" id="showWireframes" checked />
+        <label for="showWireframes"> Show wireframes</label><br>
+        <input type="checkbox" id="showSolids" />
+        <label for="showSolids"> Show solids</label><br>
+      </div>
+    </div>
+
     <canvas id="webGlCanvas" width="100%" height="100%">
       Browser does not support HTML5 canvas element.
     </canvas>
   </body>
 
-  <script src="./index.js" type="module"></script>
+  <script src="./dist/lightingTest.js" type="module"></script>
+
 </html>
