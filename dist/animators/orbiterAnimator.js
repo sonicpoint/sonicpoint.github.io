@@ -2,7 +2,7 @@ import { Animator } from "./animator.js";
 import { Transformation } from "../transformation.js";
 export class OrbiterAnimator extends Animator {
     constructor(scene, camera, cancelToken, fpsFunc, canvas, zStep) {
-        super(scene, camera, 60, cancelToken, fpsFunc);
+        super(scene, camera, 15, cancelToken, fpsFunc);
         this.canvas = canvas;
         this.zStep = zStep;
         this.prevMouseLocation = { x: 0, y: 0 };
