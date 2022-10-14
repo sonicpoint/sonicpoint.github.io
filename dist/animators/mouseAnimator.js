@@ -2,7 +2,7 @@ import { Animator } from "./animator.js";
 import { Transformation } from "./../transformation.js";
 export class MouseAnimator extends Animator {
     constructor(scene, camera, cancelToken, fpsFunc, canvas, zStep) {
-        super(scene, camera, 30, cancelToken, fpsFunc);
+        super(scene, camera, 60, cancelToken, fpsFunc);
         this.canvas = canvas;
         this.zStep = zStep;
         this.transformation = new Transformation();
